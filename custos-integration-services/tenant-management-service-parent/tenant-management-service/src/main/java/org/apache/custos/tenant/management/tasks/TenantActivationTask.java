@@ -222,31 +222,31 @@ public class TenantActivationTask<T, U> extends ServiceTaskImpl<T, U> {
 
 
         if (!update) {
-            RegisterClientResponse registerClientResponse = federatedAuthenticationClient
-                    .addClient(clientMetadataBuilder.build());
-
-
-            CredentialMetadata credentialMetadataCILogon = CredentialMetadata
-                    .newBuilder()
-                    .setId(registerClientResponse.getClientId())
-                    .setSecret(registerClientResponse.getClientSecret())
-                    .setOwnerId(tenant.getTenantId())
-                    .setType(Type.CILOGON)
-                    .build();
-
-            credentialStoreServiceClient.putCredential(credentialMetadataCILogon);
-
-
-            ConfigureFederateIDPRequest request = ConfigureFederateIDPRequest
-                    .newBuilder()
-                    .setTenantId(tenant.getTenantId())
-                    .setClientID(registerClientResponse.getClientId())
-                    .setClientSec(registerClientResponse.getClientSecret())
-                    .setScope(tenant.getScope())
-                    .setRequesterEmail(tenant.getRequesterEmail())
-                    .setType(FederatedIDPs.CILOGON)
-                    .build();
-            iamAdminServiceClient.configureFederatedIDP(request);
+//            RegisterClientResponse registerClientResponse = federatedAuthenticationClient
+//                    .addClient(clientMetadataBuilder.build());
+//
+//
+//            CredentialMetadata credentialMetadataCILogon = CredentialMetadata
+//                    .newBuilder()
+//                    .setId(registerClientResponse.getClientId())
+//                    .setSecret(registerClientResponse.getClientSecret())
+//                    .setOwnerId(tenant.getTenantId())
+//                    .setType(Type.CILOGON)
+//                    .build();
+//
+//            credentialStoreServiceClient.putCredential(credentialMetadataCILogon);
+//
+//
+//            ConfigureFederateIDPRequest request = ConfigureFederateIDPRequest
+//                    .newBuilder()
+//                    .setTenantId(tenant.getTenantId())
+//                    .setClientID(registerClientResponse.getClientId())
+//                    .setClientSec(registerClientResponse.getClientSecret())
+//                    .setScope(tenant.getScope())
+//                    .setRequesterEmail(tenant.getRequesterEmail())
+//                    .setType(FederatedIDPs.CILOGON)
+//                    .build();
+//            iamAdminServiceClient.configureFederatedIDP(request);
 
             PermissionType permissionType = PermissionType
                     .newBuilder()

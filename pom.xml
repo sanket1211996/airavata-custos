@@ -312,7 +312,7 @@
                                 </goals>
                                 <configuration>
                                     <outputDirectory>
-                                        /Users/isururanawaka/Documents/Airavata_Repository/airavata-custos/custos-integration-services/custos-integration-services-swagger/src/main/resources/protos
+                                        /home/exouser/airavata-custos/custos-integration-services/custos-integration-services-swagger/src/main/resources/protos
                                     </outputDirectory>   <!-- output directory -->
                                     <resources>
                                         <resource>
@@ -355,16 +355,16 @@
             <id>container</id>
             <properties>
                 <spring.profiles.active>dev</spring.profiles.active>
-                <vault.token>{{token}}</vault.token>
-                <vault.scheme>https</vault.scheme>
-                <vault.host>https://vault.custos.scigap.org</vault.host>
-                <vault.port>31190</vault.port>
-                <vault.uri>https://vault.custos.scigap.org:31190</vault.uri>
+                <vault.token>s.xH65c8Q9xv94smt66EJrnwP8</vault.token>
+                <vault.scheme>http</vault.scheme>
+                <vault.host>vault.vault.svc.cluster.local</vault.host>
+                <vault.port>8200</vault.port>
+                <vault.uri>supernova-keycloak.duckdns.org</vault.uri>
 
-                <iam.dev.username>{{token}}</iam.dev.username>
-                <iam.dev.password>{{token}}</iam.dev.password>
-                <iam.staging.username>{{token}}</iam.staging.username>
-                <iam.staging.password>{{token}}</iam.staging.password>
+                <iam.dev.username>admin</iam.dev.username>
+                <iam.dev.password>5UNxkuPOWnalEg==</iam.dev.password>
+                <iam.staging.username>admin</iam.staging.username>
+                <iam.staging.password>5UNxkuPOWnalEg==</iam.staging.password>
 
                 <iam.production.username>{{token}}</iam.production.username>
                 <iam.production.password>{{token}}</iam.production.password>
@@ -377,7 +377,7 @@
                 <cilogon.production.sec>{{token}}</cilogon.production.sec>
                 <custos.email.password>{{token}}</custos.email.password>
                 <spring.datasource.username>root</spring.datasource.username>
-                <spring.datasource.password>root</spring.datasource.password>
+                <spring.datasource.password>UtahSALTlakeCITY</spring.datasource.password>
 
 
             </properties>
@@ -651,7 +651,7 @@
         <brave.version>5.9.1</brave.version>
 
         <docker.image.prefix>apachecustos</docker.image.prefix>
-        <docker.image.repo>custos</docker.image.repo>
+        <docker.image.repo>sdarwant</docker.image.repo>
         <docker.plugin.version>1.4.13</docker.plugin.version>
 
         <helm.maven.plugin.version>2.8.0</helm.maven.plugin.version>
@@ -689,18 +689,18 @@
 
 <!--        <host>prod.custos.usecustos.org</host>-->
 
-        <host>custos10.sciencegateways.iu.edu</host>
+        <host>supernova-keycloak.duckdns.org</host>
 
-        <ssh.privatekey>/Users/isururanawaka/.ssh/custos/id_rsa</ssh.privatekey>
+        <ssh.privatekey>/home/exouser/.ssh/custos_local</ssh.privatekey>
 
-        <ssh.passphrase>isjarana</ssh.passphrase>
+        <ssh.passphrase>custos</ssh.passphrase>
         <dozer.version>5.5.1</dozer.version>
 
         <kafka-clients.version>1.0.0</kafka-clients.version>
 
         <email.version>1.5.0-b01</email.version>
 <!--        <ssh.username>custos</ssh.username>-->
-        <ssh.username>custosadmin</ssh.username>
+        <ssh.username>exouser</ssh.username>
         <project.version>1.1-SNAPSHOT</project.version>
         <clusterIssuer>letsencrypt-prod</clusterIssuer>
 
